@@ -1,11 +1,5 @@
-import webbrowser
-import sys
+import subprocess
 
-chrome_path = 'C:\Program Files (x86)\Mozilla Firefox\firefox.exe %s'
-url = 'https://www.reddit.com/'
+subprocess.Popen(['C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe','https://www.reddit.com'])
 
-webbrowser.get("open -a C:\\Program F~\\Mozilla Firefox\\firefox.exe %s")
-webbrowser.open(url)
 
-#webbrowser.open(url)
-quit()
