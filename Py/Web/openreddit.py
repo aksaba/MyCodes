@@ -12,4 +12,4 @@ for i in range(100):
     pyautogui.moveTo(800, 600)
     pyautogui.scroll(-25)
     i = i +1
-    print i
+    print(i)
