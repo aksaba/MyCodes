@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+
+<title>D3 Trial 1</title>
+<script type="text/javascript" src="d3.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+      var w = 600;
+      var h = 100;
+
+      d3.csv("simulated.csv", function(d)
+                              {
+                                return
+                                {
+                                  X1 = +d.X1;
+                                  Y1 = +d.Y1;
+                                };
+                              },
+                              function(error, d)
+                              {
+                                console.log(d);
+                              }
+            );
+
+
+
+
+
+     </script>
+</body>
+</html>
