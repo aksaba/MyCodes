@@ -24,7 +24,7 @@ plt.rcParams["figure.figsize"] = (10,6)
 fig1, ax1 = plt.subplots()
 
 ax2 = ax1.twinx()
-x,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12= np.loadtxt('01aug2017_chambdata.csv',unpack=True, delimiter=',',skiprows=1)
+x,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12= np.loadtxt("C:/Users/AKS/Documents/GitHub/MyCodes/Py/01aug2017_chambdata.csv",unpack=True, delimiter=',',skiprows=1)
 #ax1.plot(x,y1,label="101_Temp")
 #ax1.plot(x,y2,label="102_Temp")
 #ax1.plot(x,y3,label="103_Temp")
@@ -43,7 +43,7 @@ ax2.plot(x,y10,'r--',label="HTU21D_1_%RH")
 ax1.plot(x,y11,label="HTU21D_2_Temp")
 ax2.plot(x,y12,'b--',label="HTU21D_2_%RH")
 
-ax1.set_ylim([22,38]) 
+ax1.set_ylim([22,38])
 ax1.set_xlim([0,115.25])
 
 xref1, yref1 = [0, 115.25], [25, 25]
@@ -67,6 +67,3 @@ plt.tight_layout(rect=[0, 0, 0.8, 1],h_pad=0.5)
 
 
 plt.show()
-
-
-
