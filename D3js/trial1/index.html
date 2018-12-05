@@ -10,27 +10,37 @@
 <body>
     <script type="text/javascript">
 
-      var w = 600;
-      var h = 100;
+    var dataset = 
+    var w = 500;
+    var h = 500;
+    var dataset;
 
-      d3.csv("simulated.csv", function(d)
-                              {
-                                return
-                                {
-                                  X1 = +d.X1;
-                                  Y1 = +d.Y1;
-                                };
-                              },
-                              function(error, d)
-                              {
-                                console.log(d);
-                              }
-            );
+    d3.dsv(",", "simulated.csv", function(d) {
+    return {
+      x1: +d.X1,
+      y1: +d.Y1
+    };
+  }).then(function(data) {
+    console.log(data);
+    dataset = data;
+  });
 
+  var svg = d3.select("body")
+.append("svg")
+.attr("width", w)
+.attr("height", h);
 
-
-
-
+svg.selectAll("circle")
+.data(dataset)
+.enter()
+.append("circle")
+.attr("cx", function(d) {
+return d[0];
+})
+.attr("cy", function(d) {
+return d[1];
+})
+.attr("r", 5);
      </script>
 </body>
 </html>
