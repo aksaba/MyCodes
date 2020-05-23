@@ -10,12 +10,11 @@
 <body>
     <script type="text/javascript">
 
-    var dataset = 
     var w = 500;
     var h = 500;
     var dataset;
 
-    d3.dsv(",", "simulated.csv", function(d) {
+    d3.csv(",", "simulated.csv", function(d) {
     return {
       x1: +d.X1,
       y1: +d.Y1

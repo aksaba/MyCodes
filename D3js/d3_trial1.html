@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+
+    <title>D3 Trial 1</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  </head>
+  <body>
+  <script type="text/javascript">
+  var dataset
+  //dataset = [5,10,15,20,25];
+  var w = 800;
+  var h = 600;
+
+
+//    dataset = [50,100,150,200,250];
+  d3.csv("Book2.csv",function(d){
+      dataset = d;
+      console.log(dataset);
+  });
+  // var rowConverter = function(d){
+  //     return{
+  //     //  date : d.date,
+  //       cumulative : parseInt(d.cumulative)
+  //     //  new : +d.new,
+  //   //    tests : +d.tests,
+  //   //    percentpositive : +d["percentpositive"]
+  //     };
+  // }
+  // d3.select("body").selectAll("p")
+  //   .data(dataset)
+  //   .enter()
+  //   .append("p")
+  //   .text(function(d) { // <-- Note tender embrace at left
+  //       console.log(d);
+      //  return "I can count up to " + d;
+
+  //    })
+    //.style("color", "red");
+    //  .style("color", function(d) {
+    //     if (d > 15) {
+    //       return "red";
+    //     } else {
+    //       return "black";
+    //       }
+    // });
+
+
+    // d3.select("body").selectAll("div")
+    //   .data(dataset)
+    //   .enter()
+    //   .append("div")
+    //   .attr("class", "bar")
+    //   .style("height", function(d){
+    //       return d +"px"
+    //   })
+   </script>
+  </body>
+  </html>

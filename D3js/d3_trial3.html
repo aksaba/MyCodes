@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+
+    <title>D3 Trial 2</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+  </head>
+  <body>
+  <script type="text/javascript">
+  var dataset;
+  //dataset = [5,10,15,20,25];
+  var w = 800;
+  var h = 600;
+  d3.csv("Book3.csv",  function(d){
+    d.temp = +d.temp;
+    dataset = d;
+    //    console.log(dataset.temp);
+    //  console.log(dataet[0].name);
+     console.log(dataset);
+
+
+  d3.select("body")
+    .selectAll("p")
+    .data(dataset)
+    .enter()
+    .append("p")
+    .text(function(d) { // <-- Note tender embrace at left
+        console.log(d.temp);
+        //return d;
+
+     });
+  });
+  </script>
+  </body>
+  </html>

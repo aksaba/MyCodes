@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+
+    <title>D3 Trial 2</title>
+    <script src="https://d3js.org/d3.v3.min.js">
+
+    </script>
+
+  </head>
+  <body>
+  <script type="text/javascript">
+  var dataset;
+//  dataset = [5,10,15,20,25];
+
+
+  d3.csv("Book2.csv",  function(error,d){
+    if(error){
+      console.log(error);
+    }
+    else
+    {
+    for(var i =0; i<d.length; i++){
+    d[i].cumulative = +d[i].cumulative;
+    d[i].new = +d[i].new;
+    d[i].samples = +d[i].samples;
+    d[i].percentpositive = +d[i].percentpositive;
+      }
+    dataset = d;
+    console.log(dataset);
+    }
+
+    var w = 500;
+    var h = 200;
+    var barPadding = 2;
+    var svg = d3.select("body")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+    svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr("x",function(d, i) {
+              return i * (w / dataset.length);
+            })
+            .attr("y", function(d) {
+              return h - d.new; //Height minus data value
+            })
+            .attr("width",  w / dataset.length - barPadding)
+            .attr("height", function(d){
+              return d.new;
+            });
+    // svg.selectAll("text")
+    //         .data(dataset)
+    //         .enter()
+    //         .append("text")
+    //         .text(function(d) {
+    //           return d.new;
+    //         })
+    //         .attr("x",function(d, i) {
+    //           return i * (w / dataset.length)+5;
+    //         })
+    //         .attr("y", function(d) {
+    //           return h - d.new - 5; //Height minus data value
+    //         });
+    // d3.select("body").selectAll("div")
+    //         .data(dataset)
+    //         .enter()
+    //         .append("div")
+    //         .attr("class", "bar")
+    //         .style("height",function(d){
+    //           return d.new*2 + "px";
+    //         });
+
+
+  // d3.select("body")
+  // .selectAll("p")
+  // .data(dataset)
+  // .enter()
+  // .append("p")
+  // .text(function(d){
+  //             return d.samples;
+  //           });
+  ///console.log(dataset);
+    });
+  </script>
+  </body>
+  </html>

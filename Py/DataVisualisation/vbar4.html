@@ -1,0 +1,86 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.1.min.js" integrity="sha384-JpP8FXbgAZLkfur7LiK3j9AGBhHNIvF742meBJrjO2ShJDhCG2I1uVvW+0DUtrmc" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.0.1.min.js" integrity="sha384-xZlADit0Q04ISQEdKg2k3L4W9AwQBAuDs9nJL9fM/WwzL1tEU9VPNezOFX0nLEAz" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="6fc1aafd-9711-49fb-9c9e-14d5c9b40288" data-root-id="1043"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1132">
+          {"57c95a4d-b300-4c36-b438-e88bd1e04c85":{"roots":{"references":[{"attributes":{"overlay":{"id":"1026"}},"id":"1022","type":"BoxZoomTool"},{"attributes":{},"id":"1017","type":"BasicTicker"},{"attributes":{"axis":{"id":"1016"},"dimension":1,"ticker":null},"id":"1019","type":"Grid"},{"attributes":{"js_property_callbacks":{"change:value":[{"id":"1041"}]},"options":["Ariyalur","Chengalpattu","Chennai","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kallakurichi","Kancheepuram","Kanyakumari","Karur","Krishnagiri","Madurai","Nagapattinam","Namakkal","Nilgiris","Perambalur","Pudukottai","Ramnad","Ranipet","Salem","Sivagangai","Tenkasi","Thanjavur","Theni","Tirunelveli","Tirupathur","Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur","Trichy","Tuticorin","Vellore","Villupuram","Virudhunagar"],"title":"Select District:","value":"Ariyalur","width":140},"id":"1042","type":"Select"},{"attributes":{},"id":"1025","type":"HelpTool"},{"attributes":{},"id":"1020","type":"PanTool"},{"attributes":{},"id":"1049","type":"UnionRenderers"},{"attributes":{},"id":"1021","type":"WheelZoomTool"},{"attributes":{},"id":"1050","type":"Selection"},{"attributes":{},"id":"1023","type":"SaveTool"},{"attributes":{},"id":"1024","type":"ResetTool"},{"attributes":{"args":{"source":{"id":"1001"}},"code":"\n        var data = source.data;\n        var f = cb_obj.value\n        if(f==\"Ariyalur\") {source.data['y'] = source.data['y0'];}\n        else if(f==\"Ariyalur\") {source.data['y'] = source.data['y0'];}\n        else if(f==\"Chengalpattu\") {source.data['y'] = source.data['y1'];}\n        else if(f==\"Chennai\") {source.data['y'] = source.data['y2'];}\n        else if(f==\"Coimbatore\") {source.data['y'] = source.data['y3'];}\n        else if(f==\"Cuddalore\") {source.data['y'] = source.data['y4'];}\n        else if(f==\"Dharmapuri\") {source.data['y'] = source.data['y5'];}\n        else if(f==\"Dindigul\") {source.data['y'] = source.data['y6'];}\n        else if(f==\"Erode\") {source.data['y'] = source.data['y7'];}\n        else if(f==\"Kallakurichi\") {source.data['y'] = source.data['y8'];}\n        else if(f==\"Kancheepuram\") {source.data['y'] = source.data['y9'];}\n        else if(f==\"Kanyakumari\") {source.data['y'] = source.data['y10'];}\n        else if(f==\"Karur\") {source.data['y'] = source.data['y11'];}\n        else if(f==\"Krishnagiri\") {source.data['y'] = source.data['y12'];}\n        else if(f==\"Madurai\") {source.data['y'] = source.data['y13'];}\n        else if(f==\"Nagapattinam\") {source.data['y'] = source.data['y14'];}\n        else if(f==\"Namakkal\") {source.data['y'] = source.data['y15'];}\n        else if(f==\"Nilgiris\") {source.data['y'] = source.data['y16'];}\n        else if(f==\"Perambalur\") {source.data['y'] = source.data['y17'];}\n        else if(f==\"Pudukottai\") {source.data['y'] = source.data['y18'];}\n        else if(f==\"Ramnad\") {source.data['y'] = source.data['y19'];}\n        else if(f==\"Ranipet\") {source.data['y'] = source.data['y20'];}\n        else if(f==\"Salem\") {source.data['y'] = source.data['y21'];}\n        else if(f==\"Sivagangai\") {source.data['y'] = source.data['y22'];}\n        else if(f==\"Tenkasi\") {source.data['y'] = source.data['y23'];}\n        else if(f==\"Thanjavur\") {source.data['y'] = source.data['y24'];}\n        else if(f==\"Theni\") {source.data['y'] = source.data['y25'];}\n        else if(f==\"Tirunelveli\") {source.data['y'] = source.data['y26'];}\n        else if(f==\"Tirupathur\") {source.data['y'] = source.data['y27'];}\n        else if(f==\"Tiruppur\") {source.data['y'] = source.data['y28'];}\n        else if(f==\"Tiruvallur\") {source.data['y'] = source.data['y29'];}\n        else if(f==\"Tiruvannamalai\") {source.data['y'] = source.data['y30'];}\n        else if(f==\"Tiruvarur\") {source.data['y'] = source.data['y31'];}\n        else if(f==\"Trichy\") {source.data['y'] = source.data['y32'];}\n        else if(f==\"Tuticorin\") {source.data['y'] = source.data['y33'];}\n        else if(f==\"Vellore\") {source.data['y'] = source.data['y34'];}\n        else if(f==\"Villupuram\") {source.data['y'] = source.data['y35'];}\n        else if(f==\"Virudhunagar\") {source.data['y'] = source.data['y36'];}\n        source.change.emit();\n\n    "},"id":"1041","type":"CustomJS"},{"attributes":{"children":[{"id":"1042"},{"id":"1002"}]},"id":"1043","type":"Row"},{"attributes":{"data":{"x":["17-Apr","18-Apr","19-Apr","20-Apr","21-Apr","22-Apr","23-Apr","24-Apr","25-Apr","26-Apr","27-Apr","28-Apr","29-Apr","30-Apr","01-May","02-May","03-May","04-May","05-May","06-May","07-May"],"y":["2","2","2","4","4","6","6","6","6","6","6","6","6","7","8","26","28","34","34","222","246"],"y0":["2","2","2","4","4","6","6","6","6","6","6","6","6","7","8","26","28","34","34","222","246"],"y1":["50","50","53","53","56","56","57","57","58","58","58","70","73","78","86","90","93","97","136","145","158"],"y10":["16","16","16","16","16","16","16","16","16","16","16","16","16","16","16","16","17","17","17","17","17"],"y11":["42","42","42","42","42","42","42","42","42","42","42","42","42","42","43","43","43","44","44","45","47"],"y12":["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","2","4","8"],"y13":["44","44","46","46","46","50","52","56","60","75","79","79","79","84","87","88","90","91","91","111","111"],"y14":["40","40","43","44","44","44","44","44","44","44","44","44","44","44","45","45","45","45","45","45","45"],"y15":["50","50","50","50","51","51","55","55","55","59","59","61","61","61","61","61","61","61","76","76","76"],"y16":["9","9","9","9","9","9","9","9","9","9","9","9","9","9","9","9","9","9","13","13","13"],"y17":["1","4","4","5","5","5","5","5","7","7","7","7","7","9","9","11","11","36","37","40","73"],"y18":["0","0","0","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","3","5"],"y19":["10","10","10","11","11","11","12","14","14","15","15","15","15","18","18","20","20","21","21","21","23"],"y2":["228","235","285","303","358","373","400","452","495","523","570","673","768","906","1082","1257","1458","1724","2008","2328","2644"],"y20":["39","39","39","39","39","39","39","39","39","39","39","39","39","40","40","40","40","43","43","43","50"],"y21":["24","24","24","24","24","24","29","30","30","31","31","31","31","32","32","33","33","33","34","35","35"],"y22":["11","11","11","12","12","12","12","12","12","12","12","12","12","12","12","12","12","12","12","12","12"],"y23":["14","18","22","26","31","31","32","33","38","38","38","38","38","38","38","38","40","49","50","51","51"],"y24":["35","36","46","46","49","54","55","55","55","55","55","55","55","55","57","57","57","58","58","63","65"],"y25":["43","43","43","43","43","43","43","43","43","43","43","43","43","43","43","44","44","44","49","51","54"],"y26":["58","60","62","62","62","62","63","63","63","63","63","63","63","63","63","63","63","63","64","65","68"],"y27":["17","17","17","17","17","17","18","18","18","18","18","18","18","18","18","18","18","19","19","20","22"],"y28":["80","108","108","109","109","109","110","110","110","112","112","112","112","112","112","114","114","114","114","114","114"],"y29":["46","46","46","48","48","50","50","52","52","53","53","53","54","55","61","68","70","79","95","129","192"],"y3":["127","128","133","133","134","134","134","141","141","141","141","141","141","141","141","142","146","146","146","146","146"],"y30":["12","12","12","12","12","13","13","14","15","15","15","15","15","15","15","15","16","27","25","42","59"],"y31":["21","21","26","27","28","28","29","29","29","29","29","29","29","29","29","29","29","31","31","32","32"],"y32":["46","46","46","50","50","51","51","51","51","51","51","51","51","51","51","51","51","55","56","57","62"],"y33":["26","26","26","27","27","27","27","27","27","27","27","27","27","27","27","27","27","27","27","29","30"],"y34":["22","22","22","22","22","22","22","22","22","22","22","22","22","22","22","22","22","22","22","28","29"],"y35":["26","26","33","36","40","41","42","42","43","47","48","48","50","50","51","53","86","135","159","160","205"],"y36":["17","17","19","19","19","19","22","23","25","32","32","32","32","32","32","32","32","34","35","35","35"],"y4":["20","20","26","26","26","26","26","26","26","26","26","26","26","27","28","30","39","161","229","324","356"],"y5":["0","0","0","0","0","0","1","1","1","1","1","1","1","1","1","1","1","1","2","2","2"],"y6":["66","69","74","76","76","77","80","80","80","80","80","80","80","80","81","81","81","91","98","107","107"],"y7":["70","70","70","70","70","70","70","70","70","70","70","70","70","70","70","70","70","70","70","70","70"],"y8":["3","3","3","3","5","5","5","5","5","6","6","9","9","9","9","9","15","15","53","57","58"],"y9":["8","8","9","9","10","11","11","12","19","19","19","20","23","26","28","41","41","41","42","87","89"]},"selected":{"id":"1050"},"selection_policy":{"id":"1049"}},"id":"1001","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"1001"},"glyph":{"id":"1035"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1036"},"selection_glyph":null,"view":{"id":"1038"}},"id":"1037","type":"GlyphRenderer"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1026","type":"BoxAnnotation"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1020"},{"id":"1021"},{"id":"1022"},{"id":"1023"},{"id":"1024"},{"id":"1025"},{"id":"1039"}]},"id":"1027","type":"Toolbar"},{"attributes":{"source":{"id":"1001"}},"id":"1038","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"y"},"width":{"value":0.8},"x":{"field":"x"}},"id":"1036","type":"VBar"},{"attributes":{"callback":null,"tooltips":[["DATE","@x"],["No. of cases","@y"]]},"id":"1039","type":"HoverTool"},{"attributes":{"below":[{"id":"1013"}],"center":[{"id":"1015"},{"id":"1019"}],"left":[{"id":"1016"}],"plot_height":350,"plot_width":550,"renderers":[{"id":"1037"}],"title":{"id":"1003"},"toolbar":{"id":"1027"},"x_range":{"id":"1005"},"x_scale":{"id":"1009"},"y_range":{"id":"1007"},"y_scale":{"id":"1011"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1009","type":"CategoricalScale"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"y"},"width":{"value":0.8},"x":{"field":"x"}},"id":"1035","type":"VBar"},{"attributes":{"text":"Number of positive cases (Cumulative) in the last 21 days","text_font_size":{"value":"12pt"}},"id":"1003","type":"Title"},{"attributes":{"axis_label":"No. of Cases","axis_label_text_font":"times","axis_label_text_font_size":"15pt","axis_label_text_font_style":"normal","formatter":{"id":"1048"},"major_label_text_font_size":"10pt","ticker":{"id":"1017"}},"id":"1016","type":"LinearAxis"},{"attributes":{"axis_label_text_font_size":"15pt","formatter":{"id":"1046"},"major_label_orientation":1.5707963267948966,"major_label_text_font_size":"10pt","ticker":{"id":"1014"}},"id":"1013","type":"CategoricalAxis"},{"attributes":{"factors":["17-Apr","18-Apr","19-Apr","20-Apr","21-Apr","22-Apr","23-Apr","24-Apr","25-Apr","26-Apr","27-Apr","28-Apr","29-Apr","30-Apr","01-May","02-May","03-May","04-May","05-May","06-May","07-May"]},"id":"1005","type":"FactorRange"},{"attributes":{},"id":"1046","type":"CategoricalTickFormatter"},{"attributes":{},"id":"1007","type":"DataRange1d"},{"attributes":{},"id":"1014","type":"CategoricalTicker"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"axis":{"id":"1013"},"ticker":null},"id":"1015","type":"Grid"},{"attributes":{},"id":"1048","type":"BasicTickFormatter"}],"root_ids":["1043"]},"title":"Bokeh Application","version":"2.0.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1132').textContent;
+                  var render_items = [{"docid":"57c95a4d-b300-4c36-b438-e88bd1e04c85","root_ids":["1043"],"roots":{"1043":"6fc1aafd-9711-49fb-9c9e-14d5c9b40288"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

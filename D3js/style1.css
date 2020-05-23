@@ -1,0 +1,12 @@
+
+
+.bar-chart {
+  background-color: #D3D9D9
+}
+
+div.bar {
+display: inline-block;
+width: 20px;
+height: 75px; /* We'll override height later */
+background-color: teal;
+}
