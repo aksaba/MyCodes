@@ -21,7 +21,7 @@ data = {'DATE' : DATE,
 x = data['DATE']
 death_counts = data['DEATH_COUNT']
 death_percent = data['DEATH_PERCENT']
-ymax = int(death_counts[len(death_counts)-1])+5
+ymax = int(death_counts[len(death_counts)-1])+10
 source = ColumnDataSource(data=dict(x=x, death_counts=death_counts,death_percent=death_percent))
 
 mytext1_ypos = int(death_counts[len(death_counts)-1])-5
@@ -40,12 +40,12 @@ plot1.xaxis.axis_label_text_font_style = "normal"
 plot1.xaxis.major_label_text_font_size = "10pt"
 plot1.xaxis.major_label_orientation = np.pi/2
 plot1.xaxis.axis_label_text_font_size = "15pt"
-plot1.xaxis.ticker = SingleIntervalTicker(interval=2)
+plot1.xaxis.ticker = SingleIntervalTicker(interval=4)
 plot1.yaxis.axis_label_text_font = "times"
 plot1.yaxis.axis_label_text_font_style = "normal"
 plot1.yaxis.major_label_text_font_size = "10pt"
 plot1.yaxis.axis_label_text_font_size = "15pt"
-legend_ypos = float(death_counts[len(death_counts)-1])+150  # Decrease number
+legend_ypos = float(death_counts[len(death_counts)-1])+15  # Decrease number
 plot1.legend.location = (1,legend_ypos)
 plot1.add_tools(HoverTool(tooltips=[("DATE", "@x"), ("No. of deaths","@death_counts"),("% mortality", "@death_percent")]))
 plot1.add_layout(mytext1)

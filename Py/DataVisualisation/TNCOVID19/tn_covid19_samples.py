@@ -25,7 +25,7 @@ samples = data['SAMPLES']
 percent_pos = data['PERCENT_POS']
 percent_act = data['PERCENT_ACT']
 
-mytext1_ypos = float(samples[len(samples)-1])-20  # decrease number
+mytext1_ypos = float(samples[len(samples)-1])-40  # decrease number
 mytext1 = Label(x=1, y=mytext1_ypos, text='Day 0 (first detected case): 07 March 2020')
 ymax = float(samples[len(samples)-1])+5
 
@@ -41,7 +41,7 @@ plot1.title.text_font_size = "15pt"
 plot1.xaxis.axis_label = "Day"
 plot1.xaxis.axis_label_text_font = "times"
 plot1.xaxis.axis_label_text_font_style = "normal"
-plot1.xaxis.ticker = SingleIntervalTicker(interval=2)
+plot1.xaxis.ticker = SingleIntervalTicker(interval=4)
 plot1.xaxis.major_label_text_font_size = "10pt"
 plot1.xaxis.major_label_orientation = np.pi/2
 plot1.xaxis.axis_label_text_font_size = "15pt"
@@ -50,7 +50,7 @@ plot1.yaxis.axis_label_text_font_style = "normal"
 plot1.yaxis.major_label_text_font_size = "10pt"
 plot1.yaxis.axis_label_text_font_size = "15pt"
 plot1.add_layout(mytext1)
-legend_ypos = float(samples[len(samples)-1])-215  # Decrease number
+legend_ypos = float(samples[len(samples)-1])-350  # Decrease number
 plot1.legend.location = (1,legend_ypos)
 plot1.ygrid.visible = False
 

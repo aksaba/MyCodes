@@ -25,7 +25,7 @@ daily_counts = data['DAILY_POS_COUNT']
 
 source = ColumnDataSource(data=dict(x=x, pos_counts=pos_counts,daily_counts=daily_counts))
 
-mytext1_ypos = int(pos_counts[len(pos_counts)-1])-600
+mytext1_ypos = int(pos_counts[len(pos_counts)-1])-200
 mytext1 = Label(x=1, y=mytext1_ypos, text='Day 0 (first detected case): 07 March 2020')
 
 plot1 = figure(x_range=FactorRange(*x),plot_width=700,plot_height=350,title="Number of positive cases (Cumulative)")
@@ -37,7 +37,7 @@ plot1.xaxis.axis_label_text_font_style = "normal"
 plot1.xaxis.major_label_text_font_size = "10pt"
 plot1.xaxis.major_label_orientation = np.pi/2
 plot1.xaxis.axis_label_text_font_size = "15pt"
-plot1.xaxis.ticker = SingleIntervalTicker(interval=2)
+plot1.xaxis.ticker = SingleIntervalTicker(interval=4)
 plot1.yaxis.axis_label = "No. of Cases"
 plot1.yaxis.axis_label_text_font = "times"
 plot1.yaxis.axis_label_text_font_style = "normal"
@@ -46,7 +46,7 @@ plot1.yaxis.axis_label_text_font_size = "15pt"
 plot1.add_tools(HoverTool(tooltips=[("DATE", "@x"), ("No. of cases", "@pos_counts")]))
 plot1.add_layout(mytext1)
 
-mytext2_ypos = int(daily_counts[len(daily_counts)-1])+20
+mytext2_ypos = int(daily_counts[len(daily_counts)-1])-700
 mytext2 = Label(x=1, y=mytext2_ypos, text='Day 0 (first detected case): 07 March 2020')
 
 plot2 = figure(x_range=x, plot_width=700,plot_height=350,title="Number of daily positive cases")
@@ -58,7 +58,7 @@ plot2.xaxis.axis_label_text_font_style = "normal"
 plot2.xaxis.major_label_text_font_size = "10pt"
 plot2.xaxis.major_label_orientation = np.pi/2
 plot2.xaxis.axis_label_text_font_size = "15pt"
-plot2.xaxis.ticker = SingleIntervalTicker(interval=2)
+plot2.xaxis.ticker = SingleIntervalTicker(interval=4)
 plot2.yaxis.axis_label = "No. of Cases"
 plot2.yaxis.axis_label_text_font = "times"
 plot2.yaxis.axis_label_text_font_style = "normal"
