@@ -1,0 +1,360 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{color}
+\usepackage{soulutf8}
+\usepackage{color}
+\usepackage{soulutf8}
+
+\date{}
+
+\begin{document}
+
+\hypertarget{header-n0}{%
+\subsection{Experimental Theory and Design}\label{header-n0}}
+
+\hypertarget{header-n2}{%
+\subsubsection{Introduction}\label{header-n2}}
+
+There are several steady-state and transient techniques available for
+the measurement of thermal properties. Although not as accurate as
+steady-state methods such as the Guarded Hot Plate apparatus, transient
+techniques offer important advantages over steady-state techniques.
+These include simultaneous measurement of thermal conductivity and
+thermal diffusivity, significantly shorter duration of experiments and
+capability of studying moisture effects on thermal properties. Moreover,
+transient measurement setups are generally simpler and could be built at
+a lower cost compared to the steady-state counterparts.
+
+There are several transient measurement methods {[}1{]}, distinguished
+by the type (wire, strip or plane) and thermal profile (pulse or step)
+of heat source and the point of temperature measurement (at source or
+away from the source). One of the first techniques was implemented by
+Gustafsson {[}2{]} in 1991 using a Transient Plane Source element (now
+known as the "Gustafsson Probe") which works as both the heat source and
+the sensor. Transient method involving step-wise heating was discussed
+by Kubicar and Bohac {[}3{]}. Lei et al. {[}4{]} used the transient
+plane source method with stepwise heating to measure thermal properties
+of fabrics which are fibrous in nature. Recently, Malinarič {[}5{]}
+carried out a detailed analysis of Step-wise transient method with disk
+shaped plane heat source.
+
+\hypertarget{header-n7}{%
+\subsubsection{Measurement Theory}\label{header-n7}}
+
+In the current work, Transient Plane Source (TPS) with a step heat flux
+is used for the measurement of thermal conductivity and thermal
+diffusivity. The temperature profile is captured by a sensor positioned
+at a fixed distance from the heat source.
+
+\hypertarget{header-n10}{%
+\paragraph{Semi-infinite Model}\label{header-n10}}
+
+The experimental setup is designed to replicate the 1-D semi-infinite
+transient model illustrated in Figure 1 during the duration of the
+experiment. The analytical solution for the model is given by,
+
+\[T(x,t) = \frac{2q}{k} \left[ \sqrt{\frac{\alpha t}{\pi}}\exp{\frac{-x^2}{4 \alpha t}} - \frac{x}{2}erfc(\frac{x}{2 \sqrt{\alpha t}})\right]\]
+
+where q is the heat flux and x is the distance between the sensor and
+the heat source. The sample can be approximated as a semi-infinite solid
+to a certain degree of accuracy if the following criterion is satisfied:
+
+\[Fourier Number  \phantom{1} Fo = \frac{\alpha t }{L^2 } \leq 0.2\]
+
+where, t is the measurement time and L is equal to half the thickness of
+the sample. An approximate maximum value of thermal diffusivity,
+\(\alpha_{max}\) (obtained from literature or other sources) for the
+material of the sample or similar material shall be used in the above
+condition. By setting a practical value of sample thickness, the maximum
+duration of the experiment is obtained as follows.
+
+\[t_{max} = \frac{0.2L^2}{\alpha_{max}}\]
+
+\hl{With the thickness of the sample L fixed, the width (for a square
+shaped sample) is fixed to be about 2.4 times the thickness as suggested
+by Lei et al. {[}6{]}.}
+
+The temperature profile obtained from the experiment is curve-fit to the
+analytical solution to get k and \(\alpha\) using non-linear parameter
+estimation procedure.
+
+\hypertarget{header-n24}{%
+\paragraph{Sensitivity Coefficient Analysis}\label{header-n24}}
+
+ The selection of the time window to be used for the curve fitting
+procedure depends on the sensitivity of the parameters to the change in
+temperature as well as the linear dependence of the parameters to each
+other. Sensitivity coefficient analysis is to be carried out for this
+purpose.
+
+ Sensitivity Coefficient is defined as
+
+\[\beta_{p}(t) = p \frac{\partial T}{\partial p}\]
+
+where p is an unknown parameter. If the sensitivity coefficients are low
+or linearly dependent on each other, the curve fit may not work
+properly. Here, the unknown parameters are k and \(\alpha\) for which
+the corresponding sensitivity coefficient expressions are given by,
+
+\[\beta_{k} =\frac{-2q}{k} \left[ \sqrt{\frac{\alpha t}{\pi}}\exp{\frac{-x^2}{4 \alpha t}} - \frac{x}{2}erfc(\frac{x}{2 \sqrt{\alpha t}})\right]\]
+
+\[\beta_{\alpha} = \frac{q}{k}\sqrt{\frac{\alpha t}{\pi}}\exp{\frac{-x^2}{4 \alpha t}}\]
+
+The plot of \(\beta_{k}\) and \(\beta_{\alpha}\) against time or Fo
+indicates the initial period of time during which the properties are not
+sensitive to the change in temperature because of which their values
+cannot be estimated accurately. Since the less diffusive materials (low
+\(\alpha\)) tend to take longer to respond to the applied heat flux, we
+shall consider an approximate value of \(\alpha_{min}\) of the sample
+under study. \hl{The linear dependence between the parameters can be}
+
+To apply this analysis for different materials, we make use of the
+normalized forms of the sensitivity coefficients defined as,
+
+\[\beta_p^{'} =\left|\frac{\beta_p - \beta_{p,0}}{\beta_{p,max} - \beta_{p,0}}\right|\]
+
+ where \(\beta_{p,0}\) is the sensitivity coefficient value at the start
+of the measurement (at time \(t = 0\)) and and \(\beta_{p,max}\) is the
+same at the end of the measurement (at time \(t=t_m\) )
+
+\hypertarget{header-n41}{%
+\paragraph{Standard and Difference Analysis}\label{header-n41}}
+
+\hypertarget{header-n44}{%
+\paragraph{Uncertainty Analysis}\label{header-n44}}
+
+ For calculating the standard deviation of the estimated parameters, the
+uncertainty analysis method described in Beck and Arnold {[}7{]} and
+implemented in {[}5{]} is used here.
+
+ For the set of parameters \(p_j\), the standard deviation of the
+least-square estimate is obtained as shown below:
+
+\[\sigma^2(p_j) = \{(X^T.X)^{-1}\}_{jj}\sigma^2\]
+
+where \(\sigma\) is the standard deviation of the measurement system and
+X is the sensitivity matrix defined as,
+
+\[\{X\}_{jj} = \frac{\partial T(t_i, \bar{p})}{\partial p_j}\]
+
+\hypertarget{header-n53}{%
+\subsubsection{Experimental Setup}\label{header-n53}}
+
+ The heating element consisting of a Nickel foil (25 micron thickness),
+having a square shape and spiral structure with thin layers of kapton on
+either sides acts as the plane heat source. It is heated by a DC power
+supply under constant current setting. Two identical samples are placed
+sandwiching the heat source and held under force through a pressing
+mechanism to ensure good contact between the sample and heating element.
+Heat conducting pastes are also applied on the element to minimize
+contact resistance existing because of the presence of air gaps.
+Temperature is measured using K-type thermocouples which are positioned
+by appropriate methods. For the case of solid samples, a hole is drilled
+in the radial direction in such a way that the thermocouple is held
+tightly in the desired position. In the case of fibrous materials, the
+positioning is more difficult and hence a support made of a similar
+material to the sample is used to position the thermocouple. A thin
+wooden stick with a groove to place the thermocouple inside is crafted
+for the straw samples. Once again, heat pastes are used to reduce the
+contact resistance existing between the tip of the sensor and the
+contact area in the sample. The entire setup is placed inside a climate
+chamber in order to study the effects of temperature and relative
+humidity on the thermal properties of the sample. Two ... sensors
+interfaced with Arduino controller is used to monitor the chamber
+humidity and temperature. Additionally, two Thermocouples are also
+monitor the chamber temperature. The temperature data is logged in a
+desktop computer through the Agilent data acquisition system.
+Calibration of the thermocouples and the relative humidity sensors were
+carried out before the start of the experiment.\\
+
+\hypertarget{header-n56}{%
+\subsection{Results and Discussion}\label{header-n56}}
+
+ Polymethyl Methacrylate (PMMA) and Extruded Polystyrene (XPS) are the
+reference samples considered for validating the experimental method
+while the material under study is rice paddy straw. For all the cases,
+the sensors are placed 1 cm away from the source on either sides. The
+sample size is determined from the semi-infinite condition mentioned
+above. The time window (\(t_0\) to \(t_m\)) for curve-fitting is chosen
+by performing the analyses discussed above for each sample. The results
+of the analyses are presented in Figure 2 and 3. The final experimental
+design values are listed in Table 1.
+
+\begin{longtable}[]{@{}l|c|c|c@{}}
+\toprule
+& PMMA & XPS & Straw\tabularnewline
+\midrule
+\endhead
+\(\rho\) (measured) {[}\(kg/m^3\){]} & \(1172.97\) & \(39.51\) &
+\(70-130\)\tabularnewline
+\(k_{max} [W/mK]\) & \(0.21\){[}Rides{]} & \(0.042\){[}Dubois{]} &
+\(0.12\) {[}Chaussinand{]}\tabularnewline
+\(C_{min}\){[}\(kJ/kgK\){]} & - & \(1280\){[}Al-Ajlan{]} &
+\(1338\){[}Chaussinand{]}\tabularnewline
+\(\alpha_{max}\) {[}\(m^2/s\){]} & \(1.15 \times 10^{-7}\){[}Rides{]} &
+\(8.31 \times 10^{-7}\) & \(1.28 \times 10^{-6}\)\tabularnewline
+L (set) {[}\(m\){]} & \(0.03\) & \(0.081\) & \(0.1\)\tabularnewline
+\(\approx t_{max}\){[}\(s\){]} & \(390\) & \(395\) &
+\(335\)\tabularnewline
+\(k_{min} [W/mK]\) & \(0.18\){[}Rides{]} & \(0.032\){[}Dubois{]} &
+\(0.052\){[}Chaussinand{]}\tabularnewline
+\(C_{max}\){[}\(kJ/kgK\){]} & - & \(1280\) &
+\(2000\){[}Chaussinand{]}\tabularnewline
+\(\alpha_{min}\) {[}\(m^2/s\){]} & \(9.0 \times 10^{-8}\){[}Rides{]} &
+\(6.33 \times 10^{-7}\) & \(2.0 \times 10^{-7}\)\tabularnewline
+\(t_0\) {[}\(s\){]} & \(100\) & \(50\) & \(80\)\tabularnewline
+& & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\includegraphics{H:/Dropbox/Research/Experiment/Results/TransientAnalysis.png}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/PMMA_std_diff_NOerror__GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/XPS_std_diff_NOerror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/Straw_std_diff_NOerror.csv.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/PMMA_std_witherror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/XPS_std_witherror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/Straw_std_witherror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/PMMA_diff_witherror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/XPS_diff_witherror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{H:/Dropbox/Research/Experiment/Results/Straw_diff_witherror_GREYSCALE.png}
+\caption{}
+\end{figure}
+
+\hypertarget{header-n152}{%
+\subsection{References}\label{header-n152}}
+
+{[}1{]} Tye, R. P., and N. Lockmuller. "The development of a standard
+for contact transient methods of measurement of thermophysical
+properties." \emph{International journal of thermophysics} 26.6 (2005):
+1917-1938.
+
+{[}2{]} Gustafsson, Silas E. "Transient plane source techniques for
+thermal conductivity and thermal diffusivity measurements of solid
+materials." \emph{Review of scientific instruments} 62.3 (1991):
+797-804.
+
+{[}3{]} Ludovit Kubicar and Bohác, Vlastimil. "A step-wise method for
+measuring thermophysical parameters of materials." \emph{Measurement
+Science and Technology} 11.3 (2000): 252.
+
+{[}4{]} Lei, Zuo, Sukang Zhu, and Ning Pan. "Transient methods of
+thermal properties measurement on fibrous materials." \emph{Journal of
+Heat Transfer} 132.3 (2010): 032601.
+
+{[}5{]} Malinarič, Svetozár. "Step-wise transient method."
+\emph{Measurement Science and Technology} 27.3 (2016): 035601.
+
+{[}6{]} Lei, Zuo, Sukang Zhu, and Ning Pan. "Determination of sample
+size for step-wise transient thermal tests." \emph{Polymer testing} 28.3
+(2009): 307-314.
+
+{[}7{]} Beck, James Vere, and Kenneth J. Arnold. \emph{Parameter
+estimation in engineering and science}. James Beck, 1977.
+
+\end{document}

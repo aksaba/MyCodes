@@ -1,0 +1,52 @@
+\documentclass[12pt]{report}
+
+
+%% PACKAGES %%
+
+
+\usepackage{amsmath}
+
+\DeclareMathOperator{\erfc}{erfc}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{indentfirst} 
+
+
+%% Global Properties %%
+
+\setlength{\parindent}{3.8em}
+
+%% Document Start %%
+
+\begin{document}
+
+%\title{How to Structure a LaTeX Document}
+%\author{Andrew Roberts}
+%\date{December 2004}
+
+\chapter*{Experimental Theory and Design}
+
+\section*{Introduction}
+
+
+There are several steady-state and transient techniques available for the measurement of thermal properties. Although not as accurate as steady-state methods such as the Guarded Hot Plate apparatus, transient techniques offer important advantages over steady-state techniques. These include simultaneous measurement of thermal conductivity and thermal diffusivity, significantly shorter duration of experiments and capability of studying moisture effects on thermal properties.  Moreover, transient measurement setups are generally simpler and could be built at a lower cost compared to the steady-state counterparts.
+
+The transient measurement methods [1]are distinguished by the type (wire, strip or plane) and thermal profile (pulse or step) of heat source and the point of temperature measurement (at source or away from the source). One of the first techniques was implemented by Gustafsson [2] in 1991 using a Transient Plane Source element (now known as the "Gustafsson Probe") which works as both the heat source and the sensor. Transient method involving step-wise heating was discussed by Kubicar and Bohac [3].  Lei et al. [4] used the transient plane source method with stepwise heating to measure thermal properties of fabrics which are fibrous in nature. Recently, Malinarič [5] carried out a detailed analysis of Step-wise transient method with disk shaped plane heat source. 
+
+\section*{Measurement Theory}
+
+In the current work, Transient Plane Source (TPS) with a step heat flux is used for the measurement of thermal conductivity and thermal diffusivity. The temperature profile is captured by a sensor positioned at a fixed distance away from the heat source. 
+
+\subsection*{Semi-infinite Model}
+
+The experimental setup is designed to replicate the 1-D semi-infinite transient model illustrated in Figure 1 during the duration of the experiment. The analytical solution for the model is given by,
+
+\begin{equation}
+
+T(x,t) = \frac{2q}{k}\left[\sqrt{\frac{\alpha t}{\pi}}\exp{\frac{-x^2}{4 \alpha t}} - \frac{x}{2}\erfc{(\frac{x}{2 \sqrt{\alpha t}})}\right]
+
+\end{equation}
+\end{document}
