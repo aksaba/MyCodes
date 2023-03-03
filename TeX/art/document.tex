@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{forloop}
+\usepackage[a3paper, margin=0.5in]{geometry}
+\usepackage{tikz}
+\begin{document}
+	\newcounter{count1}
+	\newcounter{count2}
+	\noindent
+%	\newcounter{classnumber}
+	\forloop{count1}{1}{\value{count1} < 94}{
+	
+		\forloop{count2}{1}{\value{count2} < 55}{
+			\begin{tikzpicture}
+				\fill[black!100!white] (0,0) rectangle (0.27,0.35);
+				\\[-\lineskip]
+			\end{tikzpicture}
+			}	
+		}
+\end{document}
