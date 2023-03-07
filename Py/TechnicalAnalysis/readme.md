@@ -2,7 +2,7 @@ These programs are used to perform technical analysis of stocks (or any other ma
 
 There are various techniques involved in technical analysis. In these programs, we make use of two of those techniques.
 
-1. Candlestick patters: The first, "buycandle.py" in the folder "BuySignalCandle", identifies predefined candlestick patters which could indicate a buy signal for a stock. 
+1. Candlestick patters: The first, "buycandle.py" in the folder "BuySignalCandle", identifies predefined candlestick patterns which could indicate a buy signal for a stock. 
 
 2. Relative strength index (RSI): The second, "RSI_indicator.py" in the folder "RSI", makes use of the RSI indicator to identify oversold stocks. 
 
